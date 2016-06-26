@@ -1,7 +1,7 @@
 # leafletjs.dart
 Leaflet integration to Dart
 
-Note: draft version, not all functionality is supported.
+**Note**: draft version, not all functionality supported.
 
 Usage:
 
