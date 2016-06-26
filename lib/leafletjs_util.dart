@@ -1,7 +1,7 @@
 library leafletjs.util;
 
 import 'dart:math';
-import 'package:leafletjs/leafletjs.dart';
+import 'src/lat.lng.dart';
 
 abstract class PolylineUtil {
 
@@ -46,7 +46,6 @@ abstract class PolylineUtil {
   ///
   /// Decodes to a [List<LatLng>] coordinates array.
   /// This is adapted from the implementation in Project-OSRM.
-  /// https://github.com/Project-OSRM/osrm-frontend/blob/master/WebContent/routing/OSRM.RoutingGeometry.js
   ///
   static List<LatLng> decode(String str, [CodeOptions options]) {
     if (options == null) {

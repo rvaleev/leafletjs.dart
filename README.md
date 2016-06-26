@@ -31,3 +31,12 @@ Example:
         )).addTo(_map);
   }
 ```
+
+Also it includes extra util that supports conversion from [Encoded Polyline Algorithm Format](https://developers.google.com/maps/documentation/utilities/polylinealgorithm) to List<LatLng> and back
+
+```dart
+ List<LatLng> decoded = PolylineUtil.decode('_p~iF~ps|U_ulLnnqC_mqNvxq`@');
+
+ // returns a string-encoded polyline
+ String encoded = PolylineUtil.encode([new LatLng(38.5, -120.2), new LatLng(40.7, -120.95), new LatLng(43.252, -126.453)]);
+```
