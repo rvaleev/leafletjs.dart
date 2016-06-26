@@ -9,44 +9,44 @@ import 'map.dart' as L;
 
 @JS("L.marker")
 class Marker extends ILayer {
-  /**
-   * Instantiates a Marker object given a geographical point and optionally an options object.
-   */
+  ///
+  ///Instantiates a Marker object given a geographical point and optionally an options object.
+  ///
   external Marker(LatLng latlng, [MarkerOptions options]);
 
-  /**
-   * Adds the marker to the map.
-   */
+  ///
+  ///Adds the marker to the map.
+  ///
   external Marker addTo(L.Map map);
 
-  /**
-   * Returns the current geographical position of the marker.
-   */
+  ///
+  ///Returns the current geographical position of the marker.
+  ///
   external LatLng getLatLng();
 
-  /**
-   * Changes the marker position to the given point.
-   */
+  ///
+  ///Changes the marker position to the given point.
+  ///
   external Marker setLatLng(LatLng latlng);
 
-  /**
-   * Changes the marker icon.
-   */
+  ///
+  ///Changes the marker icon.
+  ///
   external Marker setIcon(Icon icon);
 
-  /**
-   * 	Changes the zIndex offset of the marker.
-   */
+  ///
+  ///	Changes the zIndex offset of the marker.
+  ///
   external Marker setZIndexOffset(num offset);
 
-  /**
-   * Changes the opacity of the marker.
-   */
+  ///
+  ///Changes the opacity of the marker.
+  ///
   external Marker setOpacity(num opacity);
 
-  /**
-   * Updates the marker position, useful if coordinates of its latLng object were changed directly.
-   */
+  ///
+  ///Updates the marker position, useful if coordinates of its latLng object were changed directly.
+  ///
   external Marker update();
 }
 

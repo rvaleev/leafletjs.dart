@@ -11,19 +11,19 @@ import 'point.dart';
 class Map {
   external Map(String id, [MapOptions options]);
 
-  /**
-   * Removes the given layer from the map.
-   */
+  ///
+  ///Removes the given layer from the map.
+  ///
   external Map removeLayer(ILayer layer);
 
-  /**
-   * Sets a map view that contains the given geographical bounds with the maximum zoom level possible.
-   */
+  ///
+  ///Sets a map view that contains the given geographical bounds with the maximum zoom level possible.
+  ///
   external Map fitBounds(LatLngBounds bounds, [FitBoundsOptions options]);
 
-  /**
-   * Pans the map to the closest view that would lie inside the given bounds (if it's not already), controlling the animation using the options specific, if any.
-   */
+  ///
+  ///Pans the map to the closest view that would lie inside the given bounds (if it's not already), controlling the animation using the options specific, if any.
+  ///
   external Map panInsideBounds(LatLngBounds bounds, [PanOptions options]);
 }
 

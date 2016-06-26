@@ -12,9 +12,9 @@ class Icon {
 @JS()
 @anonymous
 class IconOptions {
-  /**
-   * Creates an icon instance with the given options.
-   */
+  ///
+  ///Creates an icon instance with the given options.
+  ///
   external factory IconOptions({
   String iconUrl,
   String iconRetinaUrl,

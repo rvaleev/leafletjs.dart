@@ -1,4 +1,8 @@
 leaflet.js.iml
 .idea
 .packages
-packages
+packages/
+pubspec.lock
+.buildlog
+.project
+.pub/

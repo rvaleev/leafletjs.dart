@@ -9,9 +9,9 @@ import 'map.dart' as L;
 @anonymous
 class Path  extends ILayer {
 
-  /**
-   * Adds the layer to the map.
-   */
+  ///
+  ///Adds the layer to the map.
+  ///
   external Path addTo(L.Map map);
 
 }

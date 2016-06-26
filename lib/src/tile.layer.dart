@@ -11,39 +11,39 @@ import 'map.dart' as L;
 class TileLayer extends ILayer {
   external TileLayer(String urlTemplate, [TileLayerOptions options]);
 
-  /**
-   * Adds the popup to the map.
-   */
+  ///
+  ///Adds the popup to the map.
+  ///
   external TileLayer addTo(L.Map map);
 
-  /**
-   * Adds the popup to the map and closes the previous one. The same as map.openPopup(popup).
-   */
+  ///
+  ///Adds the popup to the map and closes the previous one. The same as map.openPopup(popup).
+  ///
   external TileLayer openOn(L.Map map);
 
-  /**
-   * Sets the geographical point where the popup will open.
-   */
+  ///
+  ///Sets the geographical point where the popup will open.
+  ///
   external TileLayer setLatLng(LatLng latLng);
 
-  /**
-   * Returns the geographical point of popup.
-   */
+  ///
+  ///Returns the geographical point of popup.
+  ///
   external LatLng getLatLng();
 
-  /**
-   * Sets the HTML content of the popup.
-   */
+  ///
+  ///Sets the HTML content of the popup.
+  ///
   external TileLayer setContent(String htmlContent);
 
-  /**
-   * Returns the content of the popup.
-   */
+  ///
+  ///Returns the content of the popup.
+  ///
   external String getContent();
 
-  /**
-   * Updates the popup content, layout and position. Useful for updating the popup after something inside changed, e.g. image loaded.
-   */
+  ///
+  ///Updates the popup content, layout and position. Useful for updating the popup after something inside changed, e.g. image loaded.
+  ///
   external TileLayer update();
 }
 
