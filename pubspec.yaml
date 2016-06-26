@@ -2,6 +2,7 @@ name: leafletjs
 version: 0.0.0+1
 description: Leaflet.js wrapper for Dart
 author: Renat Valeev <renat.valeev@gmail.com>
+homepage: https://github.com/rvaleev/leafletjs.dart
 environment:
   sdk: '>=1.13.1 <2.0.0'
 dependencies:
