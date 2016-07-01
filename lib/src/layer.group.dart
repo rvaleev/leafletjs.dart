@@ -1,5 +1,5 @@
 @JS()
-library leafletjs.map;
+library leafletjs.layer.group;
 
 import "package:js/js.dart";
 import 'ilayer.dart';

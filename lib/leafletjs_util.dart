@@ -52,12 +52,14 @@ abstract class PolylineUtil {
        options  = new CodeOptions();
     }
     List<LatLng> coordinates = [];
-    double lat = 0.0, lng = 0.0;
-    double latitude_change, longitude_change;
     int index = 0,
+        lat = 0,
+        lng = 0,
         shift = 0,
         result = 0,
-        byte = null;
+        byte = null,
+        latitude_change,
+        longitude_change;
 
 
     // Coordinates have variable length when encoded, so just keep
@@ -72,21 +74,22 @@ abstract class PolylineUtil {
 
       do {
         byte = str.codeUnitAt(index++) - 63;
-        result |= (byte & 0x1f) << shift;
+        result |= ((byte & 0x1f) << shift);
         shift += 5;
       } while (byte >= 0x20);
 
-      latitude_change = ((result & 1).isOdd ? ~(result >> 1) : (result >> 1)).truncateToDouble();
+      latitude_change = calcDiff(result);
 
-      shift = result = 0;
+      shift = 0;
+      result = 0;
 
       do {
         byte = str.codeUnitAt(index++) - 63;
-        result |= (byte & 0x1f) << shift;
+        result |= ((byte & 0x1f) << shift);
         shift += 5;
       } while (byte >= 0x20);
 
-      longitude_change = ((result & 1).isOdd ? ~(result >> 1) : (result >> 1)).truncateToDouble();
+      longitude_change = calcDiff(result);
 
       lat += latitude_change;
       lng += longitude_change;
@@ -95,6 +98,16 @@ abstract class PolylineUtil {
     }
 
     return coordinates;
+  }
+
+  static int calcDiff(int result) {
+    bool isZero = (result & 1) == 0;
+    int val = (result >> 1);
+    if (isZero) {
+       return val;
+    } else {
+       return -val - 1; //should be ~val, but due to https://github.com/dart-lang/sdk/issues/25493
+    }
   }
 }
 
